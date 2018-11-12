@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddressOfEntryPoint" xml:space="preserve">
+    <value>RVA of the entry point function. For unmanaged DLLs, this can be 0. For managed PE files. this value always points to the common language runtime invokation stub.</value>
+  </data>
+  <data name="BaseOfCode" xml:space="preserve">
+    <value>RVA of the beginning og the file's code section(s).</value>
+  </data>
+  <data name="BaseOfData" xml:space="preserve">
+    <value>RVA of the beginning of the file's data section(s). This entry doesn't exist in the 64-bit optional header.</value>
+  </data>
+  <data name="Checksum" xml:space="preserve">
+    <value>Checksum of the disk image file</value>
+  </data>
+  <data name="DllCharacteristics" xml:space="preserve">
+    <value>In managed files of v1.0 always set to 0. In managed files of v1.1 and later, always set to 0x400: no unmanaged Windows structural exception handling</value>
+  </data>
+  <data name="FileAlignment" xml:space="preserve">
+    <value>Alignment of sections in the disk image file. The value should be a power of 2, from 0x200 to 0x10000. If the section Alignment is set less than the memory page size, FileAlignment must match SectionAlignment</value>
+  </data>
+  <data name="ImageBase" xml:space="preserve">
+    <value>Image's preferred starting virtual address; must be aligned on the 64KB boundary (0x10000).</value>
+  </data>
+  <data name="LoaderFlags" xml:space="preserve">
+    <value>Obsolete, set to 0</value>
+  </data>
+  <data name="MajorImageVersion" xml:space="preserve">
+    <value>Major version number of the application</value>
+  </data>
+  <data name="MajorLinkerVersion" xml:space="preserve">
+    <value>Linker major version number. The VC++ linker sets this field to 8; the pure IL file generator employed by other compilers does the same. In earlier versions, this field was set to 7 and 6, respectively</value>
+  </data>
+  <data name="MajorOperatingSystemVersion" xml:space="preserve">
+    <value>Major version number of the required operating system</value>
+  </data>
+  <data name="MajorSubsystemVersion" xml:space="preserve">
+    <value>Major version number of the subsystem</value>
+  </data>
+  <data name="MinorImageVersion" xml:space="preserve">
+    <value>Minor version number of the application</value>
+  </data>
+  <data name="MinorLinkerVersion" xml:space="preserve">
+    <value>Linker minor version number</value>
+  </data>
+  <data name="MinorOperatingSystemVersion" xml:space="preserve">
+    <value>Minor version number of the required operating system</value>
+  </data>
+  <data name="MinorSubsystemVersion" xml:space="preserve">
+    <value>Minonr version number of the subsystem</value>
+  </data>
+  <data name="NumberOfRvaAndSizes" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SectionAlignment" xml:space="preserve">
+    <value>Alignment of sections when loaded in memory. This setting must be greater than or equal to the value of the FileAlignment field. The default is the memory page size.</value>
+  </data>
+  <data name="Signature" xml:space="preserve">
+    <value>Number, identifying the state of the image files. Acceptable values are 0x010b for 32-bit PE file, 0x020b for 64-bit PE file, and 0x107 for ROM image file. Managed PE files must have this field set to 0x010b or 0x020b</value>
+  </data>
+  <data name="SizeOfCode" xml:space="preserve">
+    <value>Size of code section (.text) or the sum of all code sections if multiple code sections exist. The IL assembler always emits a single code section</value>
+  </data>
+  <data name="SizeOfHeaders" xml:space="preserve">
+    <value>Sum of the sized of MsDos header and stub, the COFF header, the PE header, and the section headers, rounded up to a multiple of the FileAlignment value</value>
+  </data>
+  <data name="SizeOfHeapCommit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SizeOfHeapReserve" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SizeOfImage" xml:space="preserve">
+    <value>Size of the image file (in bytes), including all headers. This field must be set to  a multiple of the SectionAlignment value</value>
+  </data>
+  <data name="SizeOfInitializedData" xml:space="preserve">
+    <value>Size of the initialized data section (held in the field SizeOfRawData of the respective section header) or the sum of all such sections. The initialized data is defined as specific values, stored in the disk image file</value>
+  </data>
+  <data name="SizeOfStackCommit" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SizeOfStackReserve" xml:space="preserve">
+    <value>Size of virtual memory to reserve for the initial thread's stack. Only the SizeOfStackCommit field is commited; the rest is available in one-page increments. The default is 1MB for 32-bit images and 4MB for 64-bit images</value>
+  </data>
+  <data name="SizeOfUninitializedData" xml:space="preserve">
+    <value>Size of the uninitialized data section (.bss) of the sum of all such sections. This data is not part of the disk file and does not have specific values, but the OS loader commits memory space for this data when the file is loaded</value>
+  </data>
+  <data name="Subsystem" xml:space="preserve">
+    <value>User interface subsystem required to run this image file.</value>
+  </data>
+  <data name="Win32VersionValue" xml:space="preserve">
+    <value>Reserved</value>
+  </data>
+</root>
