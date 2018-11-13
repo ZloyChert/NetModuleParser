@@ -12,17 +12,11 @@ namespace NetModuleParser.Description
             var properties = header.GetType().GetProperties().Where(prop => prop.IsDefined(typeof(FieldDescriptionAttribute), false));
             List<FieldDescriptionInfo> list = new List<FieldDescriptionInfo>(properties.Count());
 
-            foreach (var prop in properties)
+            foreach (var property in properties)
             {
-                FieldDescriptionAttribute attr = (FieldDescriptionAttribute)prop.GetCustomAttribute(typeof(FieldDescriptionAttribute));
-
-                var informationServiceType = attr.InformationServiceType;
-
-                IFieldDescriptionService srv = (IFieldDescriptionService) Activator.CreateInstance(informationServiceType);
-
-                FieldDescriptionInfo fdi = srv.GetFieldDescriptionInfo(prop, attr, header);
-
-                list.Add(fdi);
+                FieldDescriptionAttribute attribute = (FieldDescriptionAttribute)property.GetCustomAttribute(typeof(FieldDescriptionAttribute));
+                IFieldDescriptionService srv = (IFieldDescriptionService) Activator.CreateInstance(attribute.InformationServiceType);
+                list.Add(srv.GetFieldDescriptionInfo(property, attribute, header));
             }
 
             return list;
