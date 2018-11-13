@@ -28,12 +28,12 @@ namespace NetModuleParser.Parsers
                 Checksum = reader.ReadUInt16(),
                 Ip = reader.ReadUInt16(),
                 Cs = reader.ReadUInt16(),
-                FileAdress = reader.ReadUInt16(),
+                FileAddress = reader.ReadUInt16(),
                 OverlayNumbers = reader.ReadUInt16(),
-                ReveresedFirst = reader.ReadUInt16Array(4),
+                ReversedFirst = reader.ReadUInt16Array(4),
                 OemId = reader.ReadUInt16(),
                 OemInformation = reader.ReadUInt16(),
-                ReveresedSecond = reader.ReadUInt16Array(10),
+                ReversedSecond = reader.ReadUInt16Array(10),
                 PeOffset = reader.ReadUInt16()
             };
         }

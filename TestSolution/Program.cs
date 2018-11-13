@@ -1,4 +1,6 @@
-﻿using NetModuleParser;
+﻿using System.Linq;
+using NetModuleParser;
+using NetModuleParser.Description;
 
 namespace TestSolution
 {
@@ -6,9 +8,12 @@ namespace TestSolution
     {
         static void Main(string[] args)
         {
-            using (ModuleReader mr = new ModuleReader(@"Ne:\Her\SmOtReT\v\ChUzHiE\PuTi"))
+            using (ModuleReader mr = new ModuleReader(@"opyat' popalsa"))
             {
                 var module = mr.ReadNetModule();
+
+                HeaderDescriptionService s = new HeaderDescriptionService();
+                var a = s.GetFieldDescription(module.MsDosHeader).ToList();
             }
         }
     }

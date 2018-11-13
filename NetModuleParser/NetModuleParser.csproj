@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Memory" Version="4.5.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="Header Description\CoffHeaderResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
