@@ -1,8 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Reflection;
 
-namespace NetModuleParser.Description
+namespace NetModuleParser.Description.DescriptionServices
 {
     public class UInt16DescriptionService : HeaderMemberDescriptionService
     {

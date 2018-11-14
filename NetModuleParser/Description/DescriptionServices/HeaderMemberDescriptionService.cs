@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace NetModuleParser.Description
+namespace NetModuleParser.Description.DescriptionServices
 {
     public abstract class HeaderMemberDescriptionService : PropertyDescriptionBaseService<HeaderMemberDescriptionInfo>
     {

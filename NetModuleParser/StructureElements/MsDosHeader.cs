@@ -1,4 +1,6 @@
 ﻿using NetModuleParser.Description;
+using NetModuleParser.Description.DescriptionServices;
+using NetModuleParser.Description.SimpleFieldsDescriptionServices;
 
 namespace NetModuleParser.StructureElements
 {

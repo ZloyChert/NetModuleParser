@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using NetModuleParser.ParserInterfaces;
 using NetModuleParser.StructureElements;
 
 namespace NetModuleParser.Parsers

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using NetModuleParser.Description.DescriptionServices;
 
 namespace NetModuleParser.Description
 {
-    public class HeaderDescriptionService<T>
+    public class DescriptionService<T>
     {
         public IEnumerable<T> GetFieldDescription<THeader>(THeader header)
         {

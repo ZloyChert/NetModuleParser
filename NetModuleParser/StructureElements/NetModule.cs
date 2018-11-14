@@ -1,7 +1,7 @@
 ﻿using NetModuleParser.Description;
-using NetModuleParser.StructureElements;
+using NetModuleParser.Description.DescriptionServices;
 
-namespace NetModuleParser
+namespace NetModuleParser.StructureElements
 {
     public class NetModule
     {

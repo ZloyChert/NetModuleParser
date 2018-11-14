@@ -12,7 +12,7 @@ namespace TestSolution
             {
                 var module = mr.ReadNetModule();
 
-                HeaderDescriptionService<HeaderDescriptionInfo> s = new HeaderDescriptionService<HeaderDescriptionInfo>();
+                DescriptionService<HeaderDescriptionInfo> s = new DescriptionService<HeaderDescriptionInfo>();
                 var a = s.GetFieldDescription(module).ToList();
             }
         }

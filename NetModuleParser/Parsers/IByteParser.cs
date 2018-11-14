@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace NetModuleParser.ParserInterfaces
+namespace NetModuleParser.Parsers
 {
     public interface IByteParser<out T>
     {

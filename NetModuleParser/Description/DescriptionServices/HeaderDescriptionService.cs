@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace NetModuleParser.Description
+namespace NetModuleParser.Description.DescriptionServices
 {
     public class HeaderDescriptionService : PropertyDescriptionBaseService<HeaderDescriptionInfo>
     {
@@ -11,7 +11,7 @@ namespace NetModuleParser.Description
             int headerOffset = GetOffset(attribute);
             int headerLength = GetLength(attribute);
             string description = GetDescription(attribute);
-            var headerDescriptionService = new HeaderDescriptionService<HeaderMemberDescriptionInfo>();
+            var headerDescriptionService = new DescriptionService<HeaderMemberDescriptionInfo>();
             var propertyToGetDescription = property.GetValue(header);
             IEnumerable<HeaderMemberDescriptionInfo> headerMemberDescriptions = headerDescriptionService.GetFieldDescription(propertyToGetDescription);
 
