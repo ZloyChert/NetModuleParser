@@ -15,8 +15,8 @@ namespace NetModuleParser.Description
             foreach (var property in properties)
             {
                 PropertyDescriptionAttribute attribute = (PropertyDescriptionAttribute)property.GetCustomAttribute(typeof(PropertyDescriptionAttribute));
-                IFieldDescriptionService<T> srv = (IFieldDescriptionService<T>) Activator.CreateInstance(attribute.InformationServiceType);
-                list.Add(srv.GetFieldDescriptionInfo(property, attribute, header));
+                IPropertyDescriptionService<T> srv = (IPropertyDescriptionService<T>) Activator.CreateInstance(attribute.InformationServiceType);
+                list.Add(srv.GetPropertyDescriptionInfo(property, attribute, header));
             }
 
             return list;

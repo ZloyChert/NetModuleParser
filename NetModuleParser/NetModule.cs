@@ -5,7 +5,7 @@ namespace NetModuleParser
 {
     public class NetModule
     {
-        [PropertyDescription(0, 2, "1", typeof(ModuleHeaderDescriptionService))]
+        [PropertyDescription(0, 2, "1", typeof(HeaderDescriptionService))]
         public MsDosHeader MsDosHeader { get; }
         public MsDosStub MsDosStub { get; }
         public PeSignature PeSignature { get; }

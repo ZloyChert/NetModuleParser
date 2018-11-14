@@ -1,6 +1,6 @@
 ﻿namespace NetModuleParser.Description
 {
-    public class FieldDescriptionInfo
+    public class HeaderMemberDescriptionInfo
     {
         public int FieldOffset { get; set; }
         public int FieldLength { get; set; }

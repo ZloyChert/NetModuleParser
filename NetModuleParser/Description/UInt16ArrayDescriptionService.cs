@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace NetModuleParser.Description
 {
-    public class UInt16ArrayFieldDescriptionService : FieldDescriptionService
+    public class UInt16ArrayDescriptionService : HeaderMemberDescriptionService
     {
         public override string GetFieldValue(PropertyInfo property, object header)
         {

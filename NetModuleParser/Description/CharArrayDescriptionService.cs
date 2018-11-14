@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
 
 namespace NetModuleParser.Description
 {
-    public class CharArrayFieldDescriptionService : FieldDescriptionService
+    public class CharArrayDescriptionService : HeaderMemberDescriptionService
     {
         public override string GetFieldValue(PropertyInfo property, object header) => string.Join(", ", (char[])property.GetValue(header));
         public override byte[] GetFieldBytes(PropertyInfo property, object header)

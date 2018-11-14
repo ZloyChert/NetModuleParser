@@ -7,6 +7,6 @@ namespace NetModuleParser.Description
         public string Description { get; set; }
         public int HeaderOffset { get; set; }
         public int HeaderLength { get; set; }
-        public IEnumerable<FieldDescriptionInfo> FieldDescriptions { get; set; }
+        public IEnumerable<HeaderMemberDescriptionInfo> HeaderMemberDescriptions { get; set; }
     }
 }
