@@ -8,12 +8,12 @@ namespace TestSolution
     {
         static void Main(string[] args)
         {
-            using (ModuleReader mr = new ModuleReader(@"opyat' popalsa"))
+            using (ModuleReader mr = new ModuleReader(@"D:\log4net.dll"))
             {
                 var module = mr.ReadNetModule();
 
-                HeaderDescriptionService s = new HeaderDescriptionService();
-                var a = s.GetFieldDescription(module.MsDosHeader).ToList();
+                HeaderDescriptionService<HeaderDescriptionInfo> s = new HeaderDescriptionService<HeaderDescriptionInfo>();
+                var a = s.GetFieldDescription(module).ToList();
             }
         }
     }

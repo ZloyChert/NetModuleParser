@@ -1,4 +1,7 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace NetModuleParser.Description
 {
@@ -6,15 +9,21 @@ namespace NetModuleParser.Description
     {
         public override string GetFieldValue(PropertyInfo property, object header)
         {
-            var fieldval = (ushort[]) property.GetValue(header);
-            string toshow = "";
-            foreach (var field in fieldval)
+            ushort[] ushortArray = (ushort[])property.GetValue(header);
+            IEnumerable<string> stringArray = ushortArray.Select(n => n.ToString("x4"));
+            return string.Join(",", stringArray);
+        }
+
+        public override byte[] GetFieldBytes(PropertyInfo property, object header)
+        {
+            List<byte[]> list = new List<byte[]>();
+            ushort[] ushortArray = (ushort[])property.GetValue(header);
+            foreach (var t in ushortArray)
             {
-                toshow += field;
-                toshow += "(ochen krivo), ";
+                list.Add(BitConverter.GetBytes(t));
             }
 
-            return toshow;
+            return list.SelectMany(n => n).ToArray();
         }
     }
 }

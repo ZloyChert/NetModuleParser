@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetModuleParser", "NetModul
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestSolution", "TestSolution\TestSolution.csproj", "{3D07F8B7-F4AD-4EEE-8A44-2E23E7AF995C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetModuleView", "NetModuleView\NetModuleView.csproj", "{6AB76B01-B109-4EC8-8B77-154A0CC4A16D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3D07F8B7-F4AD-4EEE-8A44-2E23E7AF995C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D07F8B7-F4AD-4EEE-8A44-2E23E7AF995C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D07F8B7-F4AD-4EEE-8A44-2E23E7AF995C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB76B01-B109-4EC8-8B77-154A0CC4A16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB76B01-B109-4EC8-8B77-154A0CC4A16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB76B01-B109-4EC8-8B77-154A0CC4A16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB76B01-B109-4EC8-8B77-154A0CC4A16D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

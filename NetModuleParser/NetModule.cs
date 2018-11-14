@@ -1,9 +1,11 @@
-﻿using NetModuleParser.StructureElements;
+﻿using NetModuleParser.Description;
+using NetModuleParser.StructureElements;
 
 namespace NetModuleParser
 {
     public class NetModule
     {
+        [PropertyDescription(0, 2, "1", typeof(ModuleHeaderDescriptionService))]
         public MsDosHeader MsDosHeader { get; }
         public MsDosStub MsDosStub { get; }
         public PeSignature PeSignature { get; }

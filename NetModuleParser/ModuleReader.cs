@@ -72,14 +72,13 @@ namespace NetModuleParser
 
         public NetModule ReadNetModule()
         {
-            return new NetModule
-            (
-                MsDosHeaderParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true)),
-                MsDosStubParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true)),
-                PeSignatureParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true)),
-                CoffHeaderParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true)),
-                PeHeaderParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true))
-            );
+            MsDosHeader msDosHeader = MsDosHeaderParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true));
+            MsDosStub msDosStub = MsDosStubParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true));
+            _stream.Seek(msDosHeader.PeOffset, SeekOrigin.Begin);
+            PeSignature peSignature = PeSignatureParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true));
+            CoffHeader coffHeader = CoffHeaderParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true));
+            PeHeader peHeader = PeHeaderParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true));
+            return new NetModule(msDosHeader, msDosStub, peSignature, coffHeader, peHeader);
         }
 
         public void Dispose()

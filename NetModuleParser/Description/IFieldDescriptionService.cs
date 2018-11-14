@@ -3,8 +3,8 @@ using System.Reflection;
 
 namespace NetModuleParser.Description
 {
-    public interface IFieldDescriptionService
+    public interface IFieldDescriptionService<out TT>
     {
-        FieldDescriptionInfo GetFieldDescriptionInfo(PropertyInfo property, Attribute attribute, object header);
+        TT GetFieldDescriptionInfo(PropertyInfo property, Attribute attribute, object header);
     }
 }
