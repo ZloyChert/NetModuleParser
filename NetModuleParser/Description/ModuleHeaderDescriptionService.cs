@@ -9,10 +9,10 @@ namespace NetModuleParser.Description
         {
             return new HeaderDescriptionInfo
             {
-                Description = "stub",
+                Description = (string)typeof(PropertyDescriptionAttribute).GetProperty("Description").GetValue(attribute),
                 FieldDescriptions = new HeaderDescriptionService<FieldDescriptionInfo>().GetFieldDescription(property.GetValue(header)),
-                HeaderOffset = 4,
-                HeaderLength = 4
+                HeaderOffset = (int)typeof(PropertyDescriptionAttribute).GetProperty("FieldOffset").GetValue(attribute),
+                HeaderLength = (int)typeof(PropertyDescriptionAttribute).GetProperty("FieldLength").GetValue(attribute)
             };
         }
     }
