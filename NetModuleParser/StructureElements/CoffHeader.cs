@@ -25,7 +25,7 @@ namespace NetModuleParser.StructureElements
         [PropertyDescription(16, 2, CoffHeaderResources.SizeOfOptionalHeader, typeof(UInt16DescriptionService))]
         public ushort SizeOfOptionalHeader{ get; set; } // Size of PE header, Specific to PE files, set to 0 in COFF files.2bytes
 
-        //[PropertyDescription(18, 2, CoffHeaderResources.Characteristics, typeof(UInt16DescriptionService))]
+        [PropertyDescription(18, 2, CoffHeaderResources.Characteristics, typeof(EnumUInt16DescriptionService<ImageFileIdCharacteristics>))]
         public ImageFileIdCharacteristics Characteristics{ get; set; } //Flags, indicating the attribtes of the file.2bytes
     }
 }

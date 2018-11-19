@@ -3,7 +3,7 @@
 namespace NetModuleParser.Enums
 {
     [Flags]
-    public enum ImageFileIdCharacteristics
+    public enum ImageFileIdCharacteristics : ushort
     {
         RelocationsStripped =0x0001, //Image only, Windows CE, and Microsoft Windows NT and later. This indicates that the file does not contain base relocations and must therefore be loaded at its preferred base address. If the base address is not available, the loader reports an error. The default behavior of the linker is to strip base relocations from executable (EXE) files. 
         ExecutableImage = 0x0002,//Image only. This indicates that the image file is valid and can be run. If this flag is not set, it indicates a linker error. 

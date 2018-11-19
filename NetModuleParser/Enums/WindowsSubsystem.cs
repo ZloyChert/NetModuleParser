@@ -1,6 +1,6 @@
 ﻿namespace NetModuleParser.Enums
 {
-    public enum WindowsSubsystem
+    public enum WindowsSubsystem : ushort
     {
         Unknown = 0, //An unknown subsystem
         Native = 1, //Device drivers and native Windows processes

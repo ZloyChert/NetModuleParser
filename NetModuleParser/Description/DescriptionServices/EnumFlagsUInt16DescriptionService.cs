@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace NetModuleParser.Description.DescriptionServices
 {
-    public class EnumUInt16DescriptionService<T> : PropertyDescriptionBaseService<HeaderMemberDescriptionInfo>
+    public class EnumFlagsUInt16DescriptionService<T> : PropertyDescriptionBaseService<HeaderMemberDescriptionInfo>
     {
         public override IEnumerable<HeaderMemberDescriptionInfo> GetPropertyDescriptionInfo<THeader>(PropertyInfo property, Attribute attribute, THeader header)
         {
@@ -28,7 +28,6 @@ namespace NetModuleParser.Description.DescriptionServices
 
         public virtual string GetFieldName(PropertyInfo property) => property.Name;
         public string GetFieldValue(PropertyInfo property, object header) => ((T)property.GetValue(header)).ToString();
-
         public byte[] GetFieldBytes(PropertyInfo property, object header) => BitConverter.GetBytes((ushort)property.GetValue(header));
     }
 }

@@ -3,7 +3,7 @@
 namespace NetModuleParser.Enums
 {
     [Flags]
-    public enum DllCharacteristics
+    public enum DllCharacteristics : ushort
     {
         Reserved1 = 0x0001, //Reserved, must be zero. 
         Reserved2 = 0x0002, //Reserved, must be zero. 
