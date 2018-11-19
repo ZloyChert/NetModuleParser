@@ -1,7 +1,10 @@
-﻿namespace NetModuleParser.Enums
+﻿using System.ComponentModel;
+
+namespace NetModuleParser.Enums
 {
     public enum ImageFileIdMachine
     {
+        [Description("Unknown machine type")]
         UNKNOWN = 0,
         I386 = 0x014c, //Intel 386 or later processors and compatible processors 
         R3000 = 0x0162, //MIPS little endian, 

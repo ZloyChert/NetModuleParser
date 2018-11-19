@@ -3,6 +3,7 @@ using System.IO;
 using System.Text;
 using NetModuleParser.Parsers;
 using NetModuleParser.StructureElements;
+using NetModuleParser.StructureElements.PeHeader;
 
 namespace NetModuleParser
 {
@@ -60,9 +61,9 @@ namespace NetModuleParser
             set => _coffHeaderParser = value ?? throw new ArgumentNullException("4");
         }
 
-        private IByteParser<PeHeader> _peHeaderParser = new PeHeaderParser();
+        private IByteParser<PeBaseHeader> _peHeaderParser = new PeHeaderParser();
 
-        public IByteParser<PeHeader> PeHeaderParser
+        public IByteParser<PeBaseHeader> PeHeaderParser
         {
             get => _peHeaderParser;
             set => _peHeaderParser = value ?? throw new ArgumentNullException("5");
@@ -76,7 +77,7 @@ namespace NetModuleParser
             _stream.Seek(msDosHeader.PeOffset, SeekOrigin.Begin);
             PeSignature peSignature = PeSignatureParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true));
             CoffHeader coffHeader = CoffHeaderParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true));
-            PeHeader peHeader = PeHeaderParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true));
+            PeBaseHeader peHeader = PeHeaderParser.Parse(new BinaryReader(_stream, Encoding.ASCII, true));
             return new NetModule(msDosHeader, msDosStub, peSignature, coffHeader, peHeader);
         }
 

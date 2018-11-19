@@ -1,7 +1,12 @@
-﻿namespace NetModuleParser.StructureElements
+﻿using NetModuleParser.Description;
+using NetModuleParser.Description.DescriptionServices;
+using NetModuleParser.HeaderResources;
+
+namespace NetModuleParser.StructureElements
 {
     public class PeSignature
     {
-        public char[] FileIdSignature; // 'PE/0/0', 4bytes 2000 for dll
+        [PropertyDescription(0, 4, PeSignatureResources.FileIdSignature, typeof(CharArrayDescriptionService))]
+        public char[] FileIdSignature { get; set; } // 'PE/0/0', 4bytes 2000 for dll
     }
 }

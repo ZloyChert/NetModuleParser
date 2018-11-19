@@ -17,7 +17,7 @@ namespace NetModuleParser.Description
             {
                 PropertyDescriptionAttribute attribute = (PropertyDescriptionAttribute)property.GetCustomAttribute(typeof(PropertyDescriptionAttribute));
                 IPropertyDescriptionService<T> srv = (IPropertyDescriptionService<T>) Activator.CreateInstance(attribute.InformationServiceType);
-                list.Add(srv.GetPropertyDescriptionInfo(property, attribute, header));
+                list.AddRange(srv.GetPropertyDescriptionInfo(property, attribute, header));
             }
 
             return list;

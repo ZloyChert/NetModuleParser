@@ -6,21 +6,19 @@ namespace NetModuleParser.Description.DescriptionServices
 {
     public class HeaderDescriptionService : PropertyDescriptionBaseService<HeaderDescriptionInfo>
     {
-        public override HeaderDescriptionInfo GetPropertyDescriptionInfo<T>(PropertyInfo property, Attribute attribute, T header)
+        public override IEnumerable<HeaderDescriptionInfo> GetPropertyDescriptionInfo<T>(PropertyInfo property, Attribute attribute, T header)
         {
-            int headerOffset = GetOffset(attribute);
-            int headerLength = GetLength(attribute);
+            int headerOrderNumber = GetOrderNumber(attribute);
             string description = GetDescription(attribute);
             var headerDescriptionService = new DescriptionService<HeaderMemberDescriptionInfo>();
             var propertyToGetDescription = property.GetValue(header);
             IEnumerable<HeaderMemberDescriptionInfo> headerMemberDescriptions = headerDescriptionService.GetFieldDescription(propertyToGetDescription);
 
-            return new HeaderDescriptionInfo
+            yield return new HeaderDescriptionInfo
             {
                 Description = description,
                 HeaderMemberDescriptions = headerMemberDescriptions,
-                HeaderOffset = headerOffset,
-                HeaderLength = headerLength
+                HeaderOrderNumber = headerOrderNumber,
             };
         }
     }

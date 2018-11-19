@@ -16,14 +16,15 @@ namespace NetModuleParser.Description.DescriptionServices
 
         public override byte[] GetFieldBytes(PropertyInfo property, object header)
         {
-            List<byte[]> list = new List<byte[]>();
             ushort[] ushortArray = (ushort[])property.GetValue(header);
+            List<byte[]> bytes = new List<byte[]>(ushortArray.Length);
+
             foreach (var t in ushortArray)
             {
-                list.Add(BitConverter.GetBytes(t));
+                bytes.Add(BitConverter.GetBytes(t));
             }
 
-            return list.SelectMany(n => n).ToArray();
+            return bytes.SelectMany(n => n).ToArray();
         }
     }
 }
