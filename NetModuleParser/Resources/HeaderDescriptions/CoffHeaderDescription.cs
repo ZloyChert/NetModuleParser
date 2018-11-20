@@ -1,6 +1,6 @@
-﻿namespace NetModuleParser.HeaderResources
+﻿namespace NetModuleParser.Resources.HeaderDescriptions
 {
-    public static class CoffHeaderResources
+    public static class CoffHeaderDescription
     {
         public const string Characteristics = "Flags indicating the attributes of the file";
         public const string Machine = "Number, identifying the type of target machine";

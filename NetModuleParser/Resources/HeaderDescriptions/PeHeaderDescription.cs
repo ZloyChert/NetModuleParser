@@ -1,6 +1,6 @@
-﻿namespace NetModuleParser.HeaderResources
+﻿namespace NetModuleParser.Resources.HeaderDescriptions
 {
-    public static class PeHeaderResources
+    public static class PeHeaderDescription
     {
         public const string AddressOfEntryPoint = "RVA of the entry point function. For unmanaged DLLs, this can be 0. For managed PE files. this value always points to the common language runtime invokation stub.";
         public const string BaseOfCode = "RVA of the beginning og the file's code section(s).";

@@ -1,6 +1,6 @@
-﻿namespace NetModuleParser.HeaderResources
+﻿namespace NetModuleParser.Resources.HeaderDescriptions
 {
-    public static class MsDosHeaderResources
+    public static class MsDosHeaderDescription
     {
 
         public const string Checksum = "Checksum (or 0) of executable";
